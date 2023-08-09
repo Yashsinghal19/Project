@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins,sans-serif;
+}
+.nav_container{
+  width: 100%;
+  height:100px;
+  background-color:#26344e ;
+  display: flex;
+}
+
+.head1{
+  width:30%;
+  font-size: 35px;
+  color:rgb(186, 186, 241);
+  font-weight: 550;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.head2{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap:200px;
+  align-items: center;
+  margin-right:50px ;
+}
+
+.head2 a{
+  font-size: 23px;
+  color:rgb(183, 183, 233);
+  font-weight: 550;
+  text-decoration: none;
+  transition: 0.5s ease;
+
+}
+a:hover{
+  font-size: 24px;
+}
+.container{
+  height:100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f293a;
+}
+.content{
+  position: relative;
+  height: 256px;
+  width: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content span{
+  position:absolute;
+  left:0;
+  width:32px;
+  height:6px;
+  background-color: #2c4766;
+  border-radius: 8px;
+  transform-origin:128px ;
+  transform:scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+  animation: animateBlink 3s linear infinite;
+  animation-delay:calc(var(--i)*(3s/50));
+}
+@keyframes animateBlink{
+  0%{
+    background-color: #0ef;
+  }
+  25%{
+    background-color: #2c4766;
+  }
+}
+.login-box{
+  position:absolute;
+  width:400px;
+}
+.login-box form{
+  width:100%;
+  padding: 0 50px;
+}
+h2{
+  font-size: 2em;
+  color:#0ef;
+  text-align: center;
+}
+.input_box{
+  position: relative;
+  margin:25px 0;
+}
+.input_box input{
+  height:50px;
+  width:100%;
+  background-color: transparent;
+  border:1px solid #2c4766;
+  font-size:1em;
+  color: #fff;
+  padding: 0 20px;
+  outline:none;/*doubt*/
+  border-radius: 40px;
+  transition: 0.5s ease;
+}
+.input_box input:focus,
+.input_box input:valid{
+ border:2px solid #0ef;
+}
+.input_box label{
+  position: absolute;
+  top:50%;
+  left:20px;
+  transform: translateY(-50%);/*doubt*/
+  font-size: 1em;
+  color:#fff;
+  pointer-events:none;/*doubt*/
+  transition: 0.5s ease;
+
+}
+.input_box input:focus~label,
+.input_box input:valid~label{
+  top:1px;
+  font-size: .8em;
+  background-color: #1f293a;
+  color: #0ef;
+  padding: 0 6px;
+}
+.forgot_pass{
+  margin: -15px 0px 15px;
+  text-align: center;
+}
+.forgot_pass a{
+  font-size: .85em;
+  text-decoration: none;
+  color: #fff;
+}
+.forgot_pass a:hover{
+ text-decoration: underline;
+}
+.btn{
+  width:100%;
+  height:40px;
+  border:none;
+  outline:none;
+  border-radius: 40px;
+  background-color: #0ef;
+  cursor: pointer;
+  font-size: 1em;
+  color: #1f293a;
+ font-weight:600;
+ transition: 0.5s ease;
+}
+.signup{
+  text-align: center;
+  margin-top: 20px;
+}
+.signup a{
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0ef;
+}
+.signup a:hover{
+text-decoration: underline;
+}
